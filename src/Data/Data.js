@@ -3,42 +3,20 @@ import { FaYoutube, FaInstagram, FaGithub } from 'react-icons/fa';
 import { BsChatDotsFill } from 'react-icons/bs';
 
 // import images
-import AboutImg from '../assets/img/about.png';
-import Feature1Img from '../assets/img/features/feature1.png';
-import Feature2Img from '../assets/img/features/feature2.png';
-import Feature3Img from '../assets/img/features/feature3.png';
-import Feature4Img from '../assets/img/features/feature4.png';
-import Avatar1Img from '../assets/img/testimonials/avatar1.png';
-import Avatar2Img from '../assets/img/testimonials/avatar2.png';
-import Avatar3Img from '../assets/img/testimonials/avatar3.png';
-import LogoV2 from '../assets/img/logo-v2.png';
-import HeroImage from '../assets/img/hero-img.png';
-import Feature1BgImg from '../assets/img/features/feature1_bg.png';
-import Feature2BgImg from '../assets/img/features/feature2_bg.png';
-import Feature3BgImg from '../assets/img/features/feature3_bg.png';
-import Feature4BgImg from '../assets/img/features/feature4_bg.png';
-
-
-
-// Sidebar imports
-import moment from "moment/moment";
-import {
-  UilEstate,
-  UilClipboardAlt,
-  UilUsersAlt,
-  UilPackage,
-  UilChart,
-  UilSignOutAlt,
-} from "@iconscout/react-unicons";
-
-// Analytics Cards imports
-import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
-
-// Recent Card Imports
-import img1 from "../imgs/img1.png";
-import img2 from "../imgs/img2.png";
-import img3 from "../imgs/img3.png";
+import AboutImg from '../../src/assets/img/about.png';
+import Feature1Img from '../../src/assets/img/features/feature1.png';
+import Feature2Img from '../../src/assets/img/features/feature2.png';
+import Feature3Img from '../../src/assets/img/features/feature3.png';
+import Feature4Img from '../../src/assets/img/features/feature4.png';
+import Avatar1Img from '../../src/assets/img/testimonials/avatar1.png';
+import Avatar2Img from '../../src/assets/img/testimonials/avatar2.png';
+import Avatar3Img from '../../src/assets/img/testimonials/avatar3.png';
+import LogoV2 from '../../src/assets/img/logo-v2.png';
+import HeroImage from '../../src/assets/img/hero-img.png';
+import Feature1BgImg from '../../src/assets/img/features/feature1_bg.png';
+import Feature2BgImg from '../../src/assets/img/features/feature2_bg.png';
+import Feature3BgImg from '../../src/assets/img/features/feature3_bg.png';
+import Feature4BgImg from '../../src/assets/img/features/feature4_bg.png';
 
 export const navigationData = [
   {
@@ -55,7 +33,7 @@ export const navigationData = [
   },
   {
     name: 'Signup',
-    href: '/Board',
+    href: '/login',
   },
 ];
 
@@ -218,220 +196,55 @@ export const copyrightData = {
   icon: <BsChatDotsFill />,
 };
 
-
-
-
-
-//* calendar Events
-let eventGuid = 0
-let todayStr = moment().format("YYYY-MM-DD")  // YYYY-MM-DD of today
-export const INITIAL_EVENTS = [
+export const userMenu = [
   {
-    id: createEventId(),
-    title: 'Lunch Pary',
-    start: todayStr + 'T09:00:00',
-
+    name: "Home",
+    path: "/home",
+    icon: "fa-solid fa-house",
   },
   {
-    id: createEventId(),
-    title: 'Timed event',
-    start: moment(todayStr).add(1, "days").format("YYYY-MM-DD") + 'T16:00:00'
+    name: "Appointments",
+    path: "/appointments",
+    icon: "fa-solid fa-list",
   },
   {
-    id: createEventId(),
-    title: "Head Meetup",
-    start: moment(todayStr).add(2, "days").format("YYYY-MM-DD") + 'T20:00:00'
+    name: "Apply Doctor",
+    path: "/apply-doctor",
+    icon: "fa-solid fa-user-doctor",
   },
   {
-    id: createEventId(),
-    title: "VC Meeting",
-    start: moment(todayStr).add(3, "days").format("YYYY-MM-DD") + 'T09:00:00'
+    name: "Profile",
+    path: "/profile",
+    icon: "fa-solid fa-user",
   },
   {
-    id: createEventId(),
-    title: "Payment Shedules",
-    start: moment(todayStr).add(5, "days").format("YYYY-MM-DD") + 'T13:00:00'
-  },
-  {
-    id: createEventId(),
-    title: "VC Meeting",
-    start: moment(todayStr).add(6, "days").format("YYYY-MM-DD") + 'T13:00:00'
-  },
-]
-
-export function createEventId() {
-  return String(eventGuid++)
-}
-
-
-export const boardData = {
-  columns: [
-    {
-      id: 1,
-      title: "Backlog",
-      cards: [
-        {
-          id: 1,
-          title: "Database Setup",
-          description: "Firebase Integration"
-        },
-        {
-          id: 2,
-          title: "Data Flow",
-          description: "Setup Diagram with other developers"
-        },
-      ]
-    },
-    {
-      id: 2,
-      title: "TODO",
-      cards: [
-        {
-          id: 9,
-          title: "Data Table Page",
-          description: "Server side Pagination",
-        }
-      ]
-    },
-    {
-      id: 3,
-      title: "Doing",
-      cards: [
-        {
-          id: 10,
-          title: "Full Calendar Extension",
-          description: "Make new events and store in global states"
-        },
-        {
-          id: 11,
-          title: "Custom Kanban Board",
-          description: "Setup react-kanban dep within Dashboard as seperate page"
-        }
-      ]
-    },
-    {
-      id: 4,
-      title: "Completed",
-      cards: [
-        {
-          id: 12,
-          title: "Vite Server Setup",
-          description: "Configure required modules and starters"
-        },
-        {
-          id: 13,
-          title: "Modular structre",
-          description: "Write css in form of modules to reduce the naming conflicts"
-        }
-      ]
-    }
-  ]
-}
-
-
-// Sidebar Data
-export const SidebarData = [
-  {
-    icon: UilEstate,
-    heading: "Dashboard",
-    path:'/dashboard/user',
-    
-    
-  },
-  {
-    icon: UilClipboardAlt,
-    heading: "Orders",
-    path:"user/Calendar",
-   
-  
-  },
-  {
-    icon: UilUsersAlt,
-    heading: "Customers",
-    path:"user/Board",
-  },
-  {
-    icon: UilPackage,
-    heading: 'Products',
-    path:"/products",
-  },
-  {
-    icon: UilChart,
-    heading: 'Analytics',
-    path:"/analytics",
-  },
-];
-// Analytics Cards Data
-export const cardsData = [
-  {
-    title: "Sales",
-    color: {
-      backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
-      boxShadow: "0px 10px 20px 0px #e0c6f5",
-    },
-    barValue: 70,
-    value: "25,970",
-    png: UilUsdSquare,
-    series: [
-      {
-        name: "Sales",
-        data: [31, 40, 28, 51, 42, 109, 100],
-      },
-    ],
-  },
-  {
-    title: "Revenue",
-    color: {
-      backGround: "linear-gradient(180deg, #FF919D 0%, #FC929D 100%)",
-      boxShadow: "0px 10px 20px 0px #FDC0C7",
-    },
-    barValue: 80,
-    value: "14,270",
-    png: UilMoneyWithdrawal,
-    series: [
-      {
-        name: "Revenue",
-        data: [10, 100, 50, 70, 80, 30, 40],
-      },
-    ],
-  },
-  {
-    title: "Expenses",
-    color: {
-      backGround:
-        "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
-      boxShadow: "0px 10px 20px 0px #F9D59B",
-    },
-    barValue: 60,
-    value: "4,270",
-    png: UilClipboardAlt,
-    series: [
-      {
-        name: "Expenses",
-        data: [10, 25, 15, 30, 12, 15, 20],
-      },
-    ],
+    name: "Cal",
+    path: "/notification",
+    icon: "fa-solid fa-user-doctor",
   },
 ];
 
-// Recent Update Card Data
-export const UpdatesData = [
+// admin menu
+export const adminMenu = [
   {
-    img: img1,
-    name: "Andrew Thomas",
-    noti: "has ordered Apple smart watch 2500mh battery.",
-    time: "25 seconds ago",
+    name: "Home",
+    path: "/home",
+    icon: "fa-solid fa-house",
+  },
+
+  {
+    name: "Doctors",
+    path: "/admin/doctors",
+    icon: "fa-solid fa-user-doctor",
   },
   {
-    img: img2,
-    name: "James Bond",
-    noti: "has received Samsung gadget for charging battery.",
-    time: "30 minutes ago",
+    name: "Users",
+    path: "/admin/users",
+    icon: "fa-solid fa-user",
   },
   {
-    img: img3,
-    name: "Iron Man",
-    noti: "has ordered Apple smart watch, samsung Gear 2500mh battery.",
-    time: "2 hours ago",
+    name: "Profile",
+    path: "/profile",
+    icon: "fa-solid fa-user",
   },
 ];

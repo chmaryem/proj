@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import footer data
-import { footerData }  from '../Data/Data';
+import { footerData } from '../Data/data';
 
 // import components
 import Copyright from './Copyright';

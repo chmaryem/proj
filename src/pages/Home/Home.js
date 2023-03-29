@@ -12,17 +12,21 @@ import Testimonials from '../../components/Testimonials';
 import CtaSection from '../../components/CtaSection';
 import Footer from '../../components/Footer';
 const Home = () => {
-  
-  return (
-    <div className='overflow-hidden'>
-      <Hero />
-      <About />
-      <Features />
-     
-      <CtaSection />
-      <Footer />
-    </div>
-  );
+    // animate on scroll initialization
+    Aos.init({
+      duration: 400,
+      offset: 0,
+    });
+    return (
+      <div className='overflow-hidden'>
+        <Hero />
+        <About />
+        <Features />
+        <Testimonials />
+        <CtaSection />
+        <Footer />
+      </div>
+    );
   };
   
   export default Home;

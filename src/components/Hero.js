@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import hero data
-import { heroData }  from '../Data/Data';
+import { heroData } from '../Data/data';
 
 // import components
 import Header from './Header';

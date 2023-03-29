@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import testimonials data
-import { testimonialsData }  from '../Data/Data';
+import { testimonialsData } from '../Data/data';
 
 // import swiper react components
 import { Swiper, SwiperSlide } from 'swiper/react';

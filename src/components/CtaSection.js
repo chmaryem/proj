@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import cta data
-import { ctaData }  from '../Data/Data';
+import { ctaData } from '../Data/data';
 
 // import icons
 import { BsArrowRight } from 'react-icons/bs';

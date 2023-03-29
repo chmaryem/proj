@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import features data
-import { featuresData }  from '../Data/Data';
+import { featuresData } from '../Data/data';
 
 // import icons
 import { BsArrowRight } from 'react-icons/bs';

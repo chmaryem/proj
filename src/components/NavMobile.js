@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import navigation data
-import { navigationData }  from '../Data/Data';
+import { navigationData } from '../Data/data'
 
 const NavMobile = () => {
   return (
